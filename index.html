@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakateeek - Визитка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Снег -->
+<div id="snow-container"></div>
+<header>
+    <h1 class="header-title">Zakateeek</h1>
+</header>
+
+<main>
+    <!-- Фотография и ФИО -->
+    <div class="profile-section">
+        <div class="profile-photo">
+            <img src="111.jpg" alt="Zakateeek" class="photo">
+            <img src="https://www.clipartmax.com/png/full/236-2369583_sticker-kawaii-cute-pink-soft-cat-cat.png" alt="Котик" class="cat hidden">
+        </div>
+        <h2>Дмитрий Свечников</h2>
+    </div>
+
+    <!-- Соцсети -->
+    <div class="info-section contact-section">
+        <h2>Контакты</h2>
+        <div class="social-icons">
+            <a href="https://github.com/Zakateeeks" target="_blank" aria-label="GitHub">
+                <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+            <a href="https://t.me/Zakateeek" target="_blank" aria-label="Telegram">
+                <img src="https://www.svgrepo.com/show/473804/telegram.svg" alt="Telegram">
+                <span>Telegram</span>
+            </a>
+            <a href="mailto:dmitrystrange2@gmail.com" aria-label="Email">
+                <img src="https://www.svgrepo.com/show/522171/mail.svg" alt="Email">
+                <span>Email</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- О себе -->
+    <div class="info-section">
+        <h2>Обо мне</h2>
+        <div>
+            <p><strong>Образование:</strong></p>
+            <ul>
+                <li>Студент 3-го курса Мат-Меха УрФУ.</li>
+                <li>Бывший ученик "21 School" от Сбер.</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Навыки:</strong></p>
+            <ul>
+                <li>Разработка на Go и Python.</li>
+                <li>Опыт групповых проектов и хакатонов.</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Интересы:</strong></p>
+            <ul>
+                <li>Изучение тайм-менеджмента и планирования.</li>
+                <li>Чтение книг.</li>
+                <li>Ведение блога в Telegram.</li>
+                <li>Изучение испанского языка.</li>
+                <li>Кулинария.</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Опыт:</strong></p>
+            <ul>
+                <li>Работа преподавателем программирования.</li>
+            </ul>
+        </div>
+        <h3>Мои навыки:</h3>
+
+        <div class="skills-container">
+            <div class="skill-selector">
+                <button class="skill-button" onclick="showSkill('golang')">Golang</button>
+                <button class="skill-button" onclick="showSkill('database')">Базы данных</button>
+                <button class="skill-button" onclick="showSkill('linux')">Linux</button>
+                <button class="skill-button" onclick="showSkill('git')">Git</button>
+                <button class="skill-button" onclick="showSkill('python')">Python</button>
+            </div>
+
+            <div class="skill-content">
+                <div id="golang" class="skill-item">
+                    <h4>Golang</h4>
+                    <p>Разработка на Golang, опыт создания многозадачных приложений и работы с потоками.</p>
+                </div>
+                <div id="database" class="skill-item">
+                    <h4>Базы данных</h4>
+                    <p>Опыт работы с реляционными и NoSQL базами данных, включая PostgreSQL, MySQL, MongoDB, MS SQL.</p>
+                </div>
+                <div id="linux" class="skill-item">
+                    <h4>Linux</h4>
+                    <p>Опыт разработки в среде Linux, работы с командной строкой. Опыт написания bash скриптов.</p>
+                </div>
+                <div id="git" class="skill-item">
+                    <h4>Git</h4>
+                    <p>Работа с системой контроля версий Git, создание репозиториев, веток, и управление кодом в команде.</p>
+                </div>
+                <div id="python" class="skill-item">
+                    <h4>Python</h4>
+                    <p>Программирование на Python, создание ботов, веб-приложений и автоматизация задач с использованием Django. Разработка Telegram ботов с использованием библиотеки aiogram</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Языки -->
+        <div class="info-section">
+            <h2>Знание языков</h2>
+            <ul class="language-list">
+                <li class="language-item">
+                    <img src="https://www.svgrepo.com/show/405643/flag-for-flag-united-kingdom.svg" alt="Флаг Великобритании" class="flag-icon">
+                    <div>
+                        <span class="language-name">Английский</span>
+                        <span class="language-level">(B1 — Средний)</span>
+                    </div>
+                </li>
+                <li class="language-item">
+                    <img src="https://www.svgrepo.com/show/405610/flag-for-flag-spain.svg" alt="Флаг Испании" class="flag-icon">
+                    <div>
+                        <span class="language-name">Испанский</span>
+                        <span class="language-level">(A1 — Начальный)</span>
+                    </div>
+                </li>
+                <li class="language-item">
+                    <img src="https://www.svgrepo.com/show/405590/flag-for-flag-russia.svg" alt="Флаг России" class="flag-icon">
+                    <div>
+                        <span class="language-name">Русский</span>
+                        <span class="language-level">(C2 — Родной)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    <!-- Описание проектов -->
+    <div class="info-section">
+        <h2>Проекты</h2>
+        <div class="project">
+            <h3>Befunge Interpreter</h3>
+            <h4>Описание:</h4><p> Реализация интерпретатора для эзотерического языка программирования Befunge, известного своей двухмерной структурой.<br></p>
+            <h4>Навыки:</h4>
+            <ul>
+                <li>Алгоритмы и структуры данных</li>
+                <li>Работа с нестандартными языками и их особенностями</li>
+                <li>Углубленное понимание концепций интерпретации программ</li>
+            </ul>
+            <button class="more-button" onclick="window.open('https://github.com/Zakateeeks/befunge_interpreter', '_blank')">Репозиторий</button>
+            <div class="snowman hidden">⛄</div>
+        </div>
+
+        <div class="project">
+            <h3>Приложение для визуализации алгоритмов поиска</h3>
+            <h4>Описание:</h4>
+            <p>Проект демонстрирует реализацию и анализ нескольких алгоритмов поиска путей в графах, включая:<br>
+                <br>
+                A* (поиск с эвристикой),<br>
+                Алгоритм Беллмана-Форда,<br>
+                Дейкстра,<br>
+                Флойда-Уоршелла.<br>
+                <br>
+                Проект акцентируется на сравнении производительности и эффективности использования памяти этих алгоритмов, что позволяет исследовать их практическое применение в задачах поиска оптимальных путей.</p>
+            <h4>Навыки:</h4>
+            <ul>
+                <li>Разработка алгоритмов на Python.</li>
+                <li>Использование библиотек для профилирования памяти и времени выполнения (memory-profiler, psutil).</li>
+                <li>Создание визуализаций с PyQt6.</li>
+                <li>Работа с файлами и структурами данных (матрицы смежности, графы).</li>
+            </ul>
+            <button class="more-button" onclick="window.open('https://github.com/Zakateeeks/graph_search_algorithm', '_blank')">Репозиторий</button>
+            <div class="snowman hidden">⛄</div>
+        </div>
+
+        <div class="project">
+            <h3>CRUD приложение на Go</h3>
+            <h4>Описание:</h4>
+            <p>eToDo — это минималистичное приложение для управления задачами (todo-list), которое полностью разрабатывается на Go для серверной части и использует HTML + CSS + JavaScript для фронтенда.<br><br> Цель — создать легковесное, высокопроизводительное и надежное приложение, доступное как для локального использования, так и для развертывания в веб-среде.</p>
+            <h4>Функциональность (планируется и реализуется):</h4>
+            <ul>
+                <li>Серверная часть на Go.</li>
+                <li>Хранение задач в базе данных PostgreSQL).</li>
+                <li>RESTful API для взаимодействия фронтенда и бэкенда.</li>
+                <li>Авторизация и управление пользователями (регистрация, вход).</li>
+                <li>Фронтенд на HTML + CSS + JavaScript.</li>
+                <li>Визуализация списка задач с функциями добавления, редактирования и удаления.</li>
+                <li>Использование Docker для контейнеризации и развёртывания фронтенда и бэкенда приложения.</li>
+            </ul>
+            <button class="more-button" onclick="window.open('https://github.com/Zakateeeks/eToDo', '_blank')">Репозиторий</button>
+            <div class="snowman hidden">⛄</div>
+        </div>
+
+        <div class="additional-projects">
+            <h3>Другие проекты</h3>
+            <p>У меня также есть другие интересные проекты, которые вы можете найти на моём
+                <a href="https://github.com/Zakateeeks" target="_blank" class="github-link">
+                    GitHub <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" class="github-icon">
+                </a>.
+                Посмотрите их, чтобы больше узнать о моих навыках и опыте!</p>
+        </div>
+    </div>
+
+
+<script src="scripts.js"></script>
+</main>
+</body>
+</html>

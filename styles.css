@@ -1,0 +1,397 @@
+/* ========== Глобальные стили ========== */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b; /* Темно-зеленый фон */
+    color: #c9f56c; /* Зеленый текст */
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSkills {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* ========== Шапка страницы ========== */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.header-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    animation: twinkle 1.5s infinite alternate;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.header-title::before,
+.header-title::after {
+    content: "🎄";
+    font-size: 3rem;
+    position: absolute;
+    top: 10%;
+    animation: twinkle 1.5s infinite alternate;
+    z-index: 0;
+}
+
+.header-title::before { left: 10%; }
+.header-title::after { right: 10%; }
+
+/* ========== Основной контент ========== */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========== Секция "О себе" ========== */
+
+.contact-section {
+    background-color: #f9f9f9; /* Светлый фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.icons a:hover {
+    transform: scale(1.1);
+}
+
+.icons a:hover img {
+    opacity: 0.8;
+}
+
+.info-section {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    color: #c9f56c;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+}
+.language-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.language-list img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.language-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.language-level {
+    color: #6B8E23;
+    font-style: italic;
+}
+
+/* ========== Навыки ========== */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    grap: 15px;
+}
+.skill-selector {
+    display: flex;
+    flex-wrap: wrap; /* Разрешить оборачивание элементов */
+    justify-content: center;
+    gap: 10px; /* Расстояние между кнопками */
+
+}
+.skill-content {
+    display: flex;
+    flex-wrap: wrap; /* Разрешить оборачивание элементов */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-item {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s ease;
+}
+
+.skill-item.active {
+    display: block;
+    animation: fadeInSkills 1s ease-in;
+}
+
+.skill-item img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.github-link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.github-link:hover {
+    color: #024bbf;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* Сделает иконку белой на темном фоне */
+}
+
+
+/* ========== Кнопки ========== */
+.skill-button{
+    background-color: #6B8E23;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.more-button {
+    background-color: #6B8E23;
+    color: honeydew;
+    border: none;
+    padding: 8px 16px; /* Уменьшаем размер кнопки */
+    font-size: 1rem; /* Уменьшаем размер шрифта */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-button:hover,
+.more-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+.project {
+    position: relative; /* Для позиционирования снеговика */
+    margin-bottom: 20px;
+}
+
+/* ========== Профиль ========== */
+.profile-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.profile-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #c9f56c;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-photo:hover .photo {
+    transform: scale(1.1);
+}
+
+/* Анимация котика */
+.cat {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-photo:hover .cat {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
+/* ========== Эффекты ========== */
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    pointer-events: none;
+    will-change: transform;
+}
+
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowman {
+    position: absolute;
+    bottom: -30px;
+    left: 0%;
+    transform: translateX(-50%) scale(0);
+    font-size: 2rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover .snowman {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+.snowman.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+
